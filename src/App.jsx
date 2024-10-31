@@ -11,7 +11,7 @@ function App() {
       const token = JSON.parse(localStorage.getItem("token"));
       return token;
     },
-    staleTime: 1000 * 60 * 10,
+    // staleTime: 1000 * 60 * 10,
   });
   if (token) {
     return (
