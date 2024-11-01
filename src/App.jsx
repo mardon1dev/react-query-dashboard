@@ -5,13 +5,12 @@ import LoginRoutes from "./routes/LoginRoutes";
 import { useQuery } from "@tanstack/react-query";
 
 function App() {
-  const { data: token } = useQuery({
+  const { data: token = {} } = useQuery({
     queryKey: ["token"],
     queryFn: () => {
       const token = JSON.parse(localStorage.getItem("token"));
       return token;
     },
-    // staleTime: 1000 * 60 * 10,
   });
   if (token) {
     return (
