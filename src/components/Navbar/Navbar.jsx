@@ -33,7 +33,7 @@ const Navbar = () => {
   const handleLogOut = () => {
     localStorage.removeItem("token");
     queryClient.invalidateQueries("login");
-    navigate("login")
+    navigate("/login")
   }
   return (
     <nav className="navbar bg-black h-full px-[52px] py-[42px] rounded-3xl flex flex-col justify-between">
@@ -47,7 +47,7 @@ const Navbar = () => {
           ))}
         </ul>
       </div>
-      <button className="text-white hover:bg-white hover:text-black py-2 rounded-lg" onClick={()=>handleLogOut()}>
+      <button className="text-white hover:bg-white hover:text-black py-2 rounded-lg" onClick={handleLogOut}>
         <LogoutOutlined className="text-[24px]" />
       </button>
     </nav>

@@ -112,8 +112,6 @@ const Teachers = () => {
 
   // Update user functions
 
-  console.log(loading);
-
   return (
     <div className="w-full">
       <div className="w-full flex justify-between my-5">
